@@ -1,0 +1,5 @@
+.footer {
+  height: 20vh;
+  @include flex(center, center);
+  background-color: $colorFooter;
+}

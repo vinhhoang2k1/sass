@@ -1,0 +1,28 @@
+@mixin border($width, $color) {
+  border: $width solid $color;
+}
+
+@mixin center {
+  text-align: center;
+}
+
+@mixin flex($alignItem, $justifyContent) {
+  display: flex;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}
+@mixin breakpoint($wt) {
+  @if $wt == md {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  } @else if $wt ==sm {
+    @media (max-width: 960px) {
+      @content;
+    }
+  } @else if $wt ==xs {
+    @media (max-width: 560px) {
+      @content;
+    }
+  }
+}

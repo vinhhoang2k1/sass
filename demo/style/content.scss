@@ -1,0 +1,55 @@
+// $colors: (
+//   "1": red,
+//   "2": green,
+//   "3": blue,
+//   "4": orange,
+//   "5": red,
+//   "6": green,
+//   "7": blue,
+//   "8": orange,
+// );
+// .box {
+//   width: 100%;
+//   min-height: 20vh;
+//   flex-wrap: wrap;
+//   @include flex(center, space-between);
+//   @each $i, $color in $colors {
+//     &-item_#{$i} {
+//       width: 20%;
+//       text-align: center;
+//       background-color: $color;
+//       margin: 20px;
+//     }
+//   }
+// }
+
+
+
+// .box {
+//   width: 100%;
+//   min-height: 20vh;
+//   flex-wrap: wrap;
+//   @include breakpoint(md) {
+//     font-size: 50px;
+//   }
+//   @include breakpoint(sm) {
+//     font-size: 30px;
+//   }
+//   @include flex(center, space-between);
+//   @for $i from 1 to 5 {
+//     &-item_#{$i} {
+//       width: 20%;
+//       text-align: center;
+//       margin: 20px;
+//       background-color: $primary;
+//     }
+//   }
+//   @for $i from 5 to 9 {
+//     &-item_#{$i} {
+//       width: 20%;
+//       text-align: center;
+//       margin: 20px;
+//       background-color: green;
+//     }
+//   }
+// }
