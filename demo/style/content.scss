@@ -1,27 +1,37 @@
-// $colors: (
-//   "1": red,
-//   "2": green,
-//   "3": blue,
-//   "4": orange,
-//   "5": red,
-//   "6": green,
-//   "7": blue,
-//   "8": orange,
-// );
-// .box {
-//   width: 100%;
-//   min-height: 20vh;
-//   flex-wrap: wrap;
-//   @include flex(center, space-between);
-//   @each $i, $color in $colors {
-//     &-item_#{$i} {
-//       width: 20%;
-//       text-align: center;
-//       background-color: $color;
-//       margin: 20px;
-//     }
-//   }
-// }
+$colors: (
+  1: red,
+  2: green,
+  3: blue,
+  4: orange,
+  5: red,
+  6: green,
+  7: blue,
+  8: orange,
+);
+.box {
+  width: 100%;
+  min-height: 20vh;
+  flex-wrap: wrap;
+  @include flex(center, space-between);
+  @each $i, $color in $colors {
+    @if $i % 2==0 {
+        &-item_#{$i} {
+            width: 20%;
+            text-align: center;
+            background-color: $primary;
+            margin: 20px;
+          }
+    }
+    @if $i % 2!=0 {
+        &-item_#{$i} {
+            width: 20%;
+            text-align: center;
+            background-color: #555;
+            margin: 20px;
+          }
+    }
+  }
+}
 
 
 

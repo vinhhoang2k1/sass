@@ -1,53 +1,49 @@
 @import "./style/index.scss";
 // variable
-$primary: #7d32c4;
+$primary: #d4d4d4;
 $primary2: rgb(207, 132, 132);
 $border: 1px solid #555;
 $sizeCart: 100px;
-
 
 body {
   background-color: $primary2;
   height: 100vh;
 }
 
-
 // mixin
 
-
-// @mixin flex($alignItem, $justifyContent) {
-//   display: flex;
-//   align-items: $alignItem;
-//   justify-content: $justifyContent;
-// }
-// .box {
-//   width: 100%;
-//   height: 20vh;
-//   @include flex(center, space-between);
-//   &-item {
-//     width: 20%;
-//     text-align: center;
-//     margin: 20px;
-//     background-color: $primary;
-//   }
-// }
+.box {
+  --primary2:#7d32c4;
+  width: 100%;
+  height: 20vh;
+  @include flex(center, center );
+  .do {
+    width: 20%;
+    text-align: center;
+    // margin: 20px;
+    background-color: $primary;
+  }
+  
+}
 
 // extend
 
-// .cart {
-//     border: $border;
-//     border-radius: 10px;
-//     width: $sizeCart;
-//     height: $sizeCart;
-//     line-height: $sizeCart;
-// }
-// .box  {
-//     width: 100%;
-//     @include flex(center, space-between );
-//     &-item {
-//         @extend .cart;
-//         text-align: center;
-//         margin: 20px;
-//         background-color: $primary;
-//     }
-// }
+
+.box  {
+    width: 100%;
+    @include flex(center, space-between );
+    &-item {
+      width: 200px;
+        @extend .cart;
+        text-align: center;
+        margin: 20px;
+        background-color: $primary;
+    }
+}
+.cart {
+    border: $border;
+    border-radius: 10px;
+    width: $sizeCart;
+    height: $sizeCart;
+    line-height: $sizeCart;
+}
